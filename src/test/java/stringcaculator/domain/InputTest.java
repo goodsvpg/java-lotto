@@ -1,7 +1,6 @@
 package stringcaculator.domain;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -21,7 +20,7 @@ class InputTest {
     @DisplayName("정상적으로 splitedInput가 실행되는지 확인합니다")
     void splitedInput(String value) {
         String[] result = {"1", "2", "3"};
-        assertThat(new Input(value).splitedInput(DELEMETER_REGEX.GENERAL)).isEqualTo(result);
+        assertThat(new Input(value).splitedInput(DelimiterRegex.GENERAL)).isEqualTo(result);
     }
 
 }

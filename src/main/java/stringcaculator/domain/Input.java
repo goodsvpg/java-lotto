@@ -20,7 +20,7 @@ public class Input {
         return this.value;
     }
 
-    public String[] splitedInput(DELEMETER_REGEX regex) {
+    public String[] splitedInput(DelimiterRegex regex) {
         return this.value.split(regex.toString());
     }
 
