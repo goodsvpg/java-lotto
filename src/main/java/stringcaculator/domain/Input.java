@@ -10,7 +10,7 @@ public class Input {
     }
 
     public Input validValue() {
-        if(this.value == null || this.value.isEmpty()) {
+        if(this.value == null || this.value.trim().isEmpty()) {
             return new Input("0");
         }
         return this;

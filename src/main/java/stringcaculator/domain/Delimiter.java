@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Delimiter {
     private static final Pattern CUSTOM_REGEX = Pattern.compile(DelimiterRegex.CUSTOM.toString());
     private static final int CUSTOM_DELIMITER = 1;
-    private static final int REST_INPUT = 2;
+    private static final int LAST_INPUT = 2;
     private final Input input;
 
     private Matcher matcher;
@@ -22,7 +22,7 @@ public class Delimiter {
 
     public String[] splitedInput(){
         if (useCustomDelimeter()) {
-            return this.matcher.group(REST_INPUT).split(matcher.group(CUSTOM_DELIMITER));
+            return this.matcher.group(LAST_INPUT).split(matcher.group(CUSTOM_DELIMITER));
         }
         return input.splitedInput(DelimiterRegex.GENERAL);
     }
